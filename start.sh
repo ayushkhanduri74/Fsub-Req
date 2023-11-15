@@ -1,12 +1,13 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/CyberTG/Queen-autofilter.git /master_personal
+  gh repo clone ayushkhanduri74/Fsub-Req
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /master_personal
+  git clone $UPSTREAM_REPO /Fsub-Req
 fi
-cd /master_personal
+cd /Fsub-Req
 pip3 install -U -r requirements.txt
-echo "Starting DQ-The-File-Donor...."
+echo "Starting Bot..."
 python3 bot.py
+
